@@ -15,10 +15,13 @@ for(let i = 0; i < sheets.length; i++)
       data.push(res)
    })
 }
+
+console.log(data);
   
 const ws = reader.utils.json_to_sheet(data)
   
-reader.utils.book_append_sheet(file,ws,"Sheet3")
+// append to new sheet
+// reader.utils.book_append_sheet(file,ws,"Sheet1")
   
 // Writing to our file
 reader.writeFile(file,'./test_export.xlsx')
